@@ -28,7 +28,9 @@ char *ft_paths(char **envp, int p, char *cmd)
 		path[i] = ft_strjoin(path[i], "/");
 		path[i] = ft_strjoin(path[i], cmd);
 		if (access(path[i], F_OK)==0)
+		{
 			return(path[i]);
+		}
 		i++;
 	}
 	return(NULL);
