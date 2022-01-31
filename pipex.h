@@ -1,11 +1,12 @@
 #ifndef PIPEX_H
 # define PIPEX_H
 
-# include<stdio.h>
-# include<unistd.h>
-# include<stdlib.h>
-# include<fcntl.h>
-# include<sys/types.h>
+# include <stdio.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include <fcntl.h>
+# include <sys/wait.h>
+# include <sys/types.h>
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n);
 int findp(char **envp);
