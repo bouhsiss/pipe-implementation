@@ -29,11 +29,12 @@ int	findp(char **envp)
 char	*ft_paths(char **envp, int p, char *cmd)
 {
 	char	**path;
+	char	**path_temp;
 	int		i;
 
 	i = 0;
-	path = ft_split(envp[p], '=');
-	path = ft_split(path[1], ':');
+	path_temp = ft_split(envp[p], '=');
+	path = ft_split(path_temp[1], ':');
 	while (path[i])
 	{
 		path[i] = ft_strjoin(path[i], "/");

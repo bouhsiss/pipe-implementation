@@ -47,7 +47,7 @@ void	child(char **av, char **envp, int *end)
 	{
 		ft_putstr_fd("zsh: command not found: ", 2);
 		ft_putendl_fd(cmd[0], 2);
-		exit(127);
+		exit(0);
 	}
 }
 
@@ -69,7 +69,7 @@ void	parent(char **av, char **envp, int *end)
 	{
 		ft_putstr_fd("zsh: command not found: ", 2);
 		ft_putendl_fd(cmd[0], 2);
-		exit(0);
+		exit(127);
 	}
 }
 

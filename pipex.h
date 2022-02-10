@@ -27,5 +27,6 @@ char	*ft_paths(char **envp, int p, char *cmd);
 char	*ft_strjoin(char *s1, char *s2);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
+void	free_array(char **arr);
 
 #endif

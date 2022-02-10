@@ -3,6 +3,11 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 SRCS = pipex.c path_utils.c utils_1.c utils_2.c
 
+OBJS = $(SRCS:.c=.o)
+
+%.o : %.c
+	   $(CC) $(CFLAGS) $< -c
+
 $(NAME) : $(SRCS)
 	$(CC) $(CFLAGS) $(SRCS) -o $(NAME)
 
